@@ -2,6 +2,37 @@
   #FONTS
 \*------------------------------------*/
 
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 200;
+    src: url("../fonts/hkgrotesk-light-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-light-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 400;
+    src: url("../fonts/hkgrotesk-regular-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HK Grotesk Web";
+    font-weight: 600;
+    src: url("../fonts/hkgrotesk-medium-webfont.woff2") format("woff2"),
+         url("../fonts/hkgrotesk-medium-webfont.woff") format("woff");
+}
+
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+
+:root {
+    --primary: #5051DB;
+    --primary-dark: #3E3EA8;
+    --neutral-dark: #202024;
+}
+
 /*------------------------------------*\
   #GENERIC
 \*------------------------------------*/
@@ -15,8 +46,8 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
-    color: #111;
+    font-family: "HK Grotesk Web", Helvetica, arial, sans-serif;
+    color: var(--neutral-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,7 +67,7 @@ html {
  */
 
 ::selection {
-    background: #e85e00;
+    background: var(--primary);
     color: white;
     text-shadow: none;
 }
@@ -64,18 +95,21 @@ img {
 
 h1 {
     font-size: 36px;
+    font-weight: 200;
     line-height: 48px;
     margin: 0 0 24px;
 }
 
 h2 {
     font-size: 32px;
+    font-weight: 200;
     line-height: 40px;
     margin: 0 0 24px;
 }
 
 h3 {
     font-size: 26px;
+    font-weight: 200;
     line-height: 32px;
     margin: 0 0 24px;
 }
@@ -136,18 +170,18 @@ hr {
 }
 
 a {
-    color: RoyalBlue;
+    color: var(--primary);
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: BlueViolet;
+    color: var(--primary-dark);
 }
 
 a:hover,
 a:focus {
-    color: Crimson;
+    color: var(--primary-dark);
 }
 
 /*------------------------------------*\
@@ -194,7 +228,7 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    max-width: 90em; /* 90 * 16px = 1440px */
+    max-width: 70em; /* 90 * 16px = 1440px */
 }
 
 /*
@@ -448,6 +482,10 @@ a:focus {
 }
 
 @media (min-width: 768px) {
+    html {
+        font-size: 20px;
+        line-height: 1.6;
+    }
     .u-1-of-2-bp2 {
         flex-basis: calc(100% / 2) !important;
     }
