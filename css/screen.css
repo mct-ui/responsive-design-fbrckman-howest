@@ -31,6 +31,7 @@
     --primary: #5051DB;
     --primary-dark: #3E3EA8;
     --primary-light: #7373f5;
+    --primary-lighter: #3887f7;
     --neutral-dark: #202024;
     --neutral: #6c6c75;
 }
@@ -218,6 +219,11 @@ a:focus {
 
 .o-row--neutral-x-light {
     background-color: #f7f7f7;
+}
+
+.o-row--gradient {
+    background: linear-gradient(to top right, var(--primary),var(--primary-lighter));
+    color: white;
 }
 
 @media (min-width: 768px) {
@@ -625,7 +631,22 @@ a:focus {
     background-color: var(--primary-dark);
 }
 
+/* Inversed */
 
+.c-link-cta--inverse,
+.c-link-cta--inverse:visited,
+.c-link-cta--inverse:active,
+.c-link-cta--inverse:hover {
+    color: white;
+}
+
+.c-link-cta--inverse::after {
+    background-color: white;
+}
+
+.c-link-cta--inverse:hover::after {
+    background-color: white;
+}
 
 /*------------------------------------*\
   #UTILITIES
