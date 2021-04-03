@@ -507,6 +507,12 @@ a:focus {
     .c-header__nav {
         display: block;
     }
+
+    .c-header__nav:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
 }
 
 /*
