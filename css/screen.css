@@ -510,6 +510,70 @@ a:focus {
 }
 
 /*
+    Component: footer
+    ---
+    Main footer of the website
+*/
+
+.c-footer {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    column-gap: 120px;
+    margin-top: 24px;
+}
+
+.c-footer__logo {
+    display: block;
+    flex-basis: 100%;
+}
+
+.c-footer__nav {
+    display: inline-block;
+}
+
+@media (min-width: 768px) {
+    .c-footer {
+        justify-content: center;
+        column-gap: 0;
+    }
+
+    .c-footer__logo {
+        text-align: center;
+    }
+
+    .c-footer__logo .c-logo {
+        margin-bottom: 8px;
+    }
+
+    .c-footer__nav {
+        padding: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .c-footer {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .c-footer__logo {
+        margin-bottom: 24px;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .c-footer__logo .c-logo {
+        margin: auto;
+    }
+
+    .c-footer__nav {
+        display: inline-block
+    }
+}
+
+/*
     Component: Lead
     ---
     Lead type treatments to style everything that differs from standard typography elements
